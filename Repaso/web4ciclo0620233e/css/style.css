@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS formatos */
+h1, h3, h4{
+    color:green;
+    font-family:Arial;
+    letter-spacing:5;
+    margin-top: 50pt;
+}
+h2{
+    color:yellow;
+    font-family:sans-serif;
+    background-color:aqua;
+}
+p{
+  font-size:18;
+  margin-left: 80pt;
+  font-family: times-news-roman;
+  color:red;
+  text-decoration: underline;
+  background-color: coral;
+  text-align: justify;
+}
+table{
+    color: yellowgreen;
+    font-family: Arial black;
+    text-align: center;
+    background-image: url('imagenes/fondo.jpg');
+}

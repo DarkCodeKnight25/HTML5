@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/jpg" href="imagenes/logo.jpg">
+    <title>Mi Primera Página Web con HTML5</title>
+    <link href="css/style1.css" rel="stylesheet" type="text/css">
+    <script>
+        function calcular()
+        {
+            var s = 0;
+            var r = 0
+            var p = 0;
+            var d = 0;
+            n1 = parseInt(document.getElementById('txtn1').value);
+            n2 = parseInt(document.getElementById('txtn2').value);
+            opera = document.getElementById('opera').value;
+            if (opera =='SUMA')
+            {
+                s = n1 + n2;
+                mensaje = "La suma de " + n1 + " y " + n2 + " es = " + s;
+                alert(mensaje);
+            }
+            if (opera == 'RESTA')
+            {
+                r = n1 - n2;
+                mensaje = "La resta de " + n1 + " y " + n2 + " es = " + r;
+                alert(mensaje);
+            }
+            if (opera == 'PRODUCTO')
+            {
+                p = n1 * n2;
+                mensaje = "El producto de " + n1 + " y " + n2 + " es = " + p;
+                alert(mensaje);
+            }
+            if (opera == 'DIVISION')
+            {
+                d = n1 / n2;
+                mensaje = "La división entre " + n1 + " y " + n2 + " es = " + d;
+                alert(mensaje);
+            }
+
+
+        }
+    </script>
+</head>
+<body bgcolor="#81F7BE">
+    <header>
+        <h1>Operaciones con Números</h1>
+    </header>
+    <nav>
+        <p><a href="#">INICIO</a></p>
+        <p><a href="#">LA EMPRESA</a></p>
+        <p><a href="#">SERVICIOS</a></p>
+        <p><a href="#">CONTACTANOS</a></p>
+    </nav>
+    <section>
+        <h1>OPERACIONES BASICAS</h1>
+        <article>
+            <form name="fmr1" action="" method="post" enctype="text/plain">
+                Número 1:<input type="number" name="txtn1" id="txtn1"><br>
+                Número 2:<input type="number" name="txtn2" id="txtn2"><br><br>
+                Selecciona una Operación:<select name="opera" id="opera">
+                    <option value="SUMA" selected>SUMA</option>
+                    <option value="RESTA">RESTA</option>
+                    <option value="PRODUCTO">PRODUCTO</option>
+                    <option value="DIVISION">DIVISION</option>
+                </select><br><br>
+                <input type="reset" class="botones" name="btnnuevo" value="Nuevo">
+                <input type="button" class="botones" name="btncalcular" value="Calcular" onclick="calcular();">
+            </form>
+        </article>
+    </section>
+    <aside>
+        <div id="anuncio1">
+            <h1>Este es un espacio publicitario</h1>
+            <h2>Coloca los anuncios aquí</h2>
+            <p>Todo sobre Tecnología</p>
+        </div>
+    </aside>
+    <footer>
+        <h1>Este es el pie de página</h1>
+        <h2>Contáctanos al Teléfono: (074)242424 - Dirección: Las Magnolias 234 - Chiclayo</h2>
+    </footer>
+</body>
+</html>

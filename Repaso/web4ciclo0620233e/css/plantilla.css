@@ -1,0 +1,36 @@
+body {
+    background-color: beige;
+}
+#global{
+    width: 800px;height:800px;
+    margin:0 auto 0 auto;
+    background-color: cadetblue;
+}
+#cabecera{
+    width: 800px;
+    margin: 0 auto 0 auto;
+    background-color: chartreuse;
+}
+#navegacion{
+    width: 800px;
+    margin:0 auto 0 auto;
+    background-color: coral;
+}
+#principal{
+    width:650px;
+    margin: 0 auto 0 auto;
+    background-color: darkkhaki;
+    float:left;
+}
+.anuncios1{
+    width:150px;
+    margin:0 auto 0 auto;
+    background-color: bisque;
+    float:right;
+}
+#pie{
+    width: 800px;
+    margin:0 auto 0 auto;
+    background-color: darkorange;
+    float:left;
+}

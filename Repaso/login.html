@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/jpg" href="imagenes/logo.jpg">
+    <title>Mi Primera Página Web con HTML5</title>
+    <link href="css/style1.css" rel="stylesheet" type="text/css">
+    <script>
+        function validar(){
+            u = document.getElementById("txtusuario").value;
+            c = document.getElementById("txtclave").value;
+            if ((u == 'admin') && (c == 'admin123'))
+              {
+                window.open("http://www.rpp.pe");
+              }
+              else
+              {
+                alert('Lo siento...no es posible iniciar sesión!!!');
+              }
+        }
+    </script>
+</head>
+<body bgcolor="#81F7BE">
+    <header>
+        <h1>Esta es la Cabecera de la Página</h1>
+        <h2>Ubicar la primera presentación aquí</h2>
+    </header>
+    <nav>
+        <p><a href="#">INICIO</a></p>
+        <p><a href="#">LA EMPRESA</a></p>
+        <p><a href="#">SERVICIOS</a></p>
+        <p><a href="#">CONTACTANOS</a></p>
+    </nav>
+    <section>
+        <h1>BIENVENIDOS A LA INTRANET</h1>
+        <h2>Inicia sesión para ingresar</h2>
+        <article>
+            <form name="fmr1" action="" method="post" enctype="text/plain">
+                Usuario:<input type="text" name="txtusuario" id="txtusuario" size="20" maxlength="20"><br>
+                Contraseña:<input type="password" name="txtclave" id="txtclave" size="20" maxlength="10"><br>
+                <input type="reset" class="botones" name="btnnuevo" value="Nuevo">
+                <input type="button" class="botones" name="btnlogin" value="Iniciar Sesión" onclick="validar();">
+            </form>
+        </article>
+    </section>
+    <aside>
+        <div id="anuncio1">
+            <h1>Este es un espacio publicitario</h1>
+            <h2>Coloca los anuncios aquí</h2>
+            <p>Todo sobre Tecnología</p>
+        </div>
+    </aside>
+    <footer>
+        <h1>Este es el pie de página</h1>
+        <h2>Contáctanos al Teléfono: (074)242424 - Dirección: Las Magnolias 234 - Chiclayo</h2>
+    </footer>
+</body>
+</html>
