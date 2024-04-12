@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/css/nv.css">
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <img src="/public/img/AltaredGroup.png" alt="" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+            <img src="/public/img/Wriothesley_Card.jpg" alt="" class="user-pic" onclick="ToggleMenu()">
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="uer-info">
+                        <img src="/public/img/Wriothesley_Card.jpg" alt="">
+                        <h3 >kenshin</h3>
+                    </div>
+                    <hr>
+                    <a href="#" class="sub-menu-link">
+                        <img src="/public/img/usuario.png" alt="" srcset="">
+                        <p>Edit Profile</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <img src="/public/img/setting.png" alt="" srcset="">
+                        <p>Setting & Privacy</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <img src="/public/img/help.png" alt="" srcset="">
+                        <p>Help & Support</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <img src="/public/img/logout.png" alt="" srcset="">
+                        <p>Logout</p>
+                        <span>></span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <script>
+        let subMenu = document.getElementById("subMenu");
+        function ToggleMenu(){
+            subMenu.classList.toggle("open-menu");
+        }
+    </script>
+</body>
+</html>

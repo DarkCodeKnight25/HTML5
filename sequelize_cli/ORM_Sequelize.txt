@@ -1,0 +1,81 @@
+*****creacion de orm_sequelize****
+///instalacion de express
+npm i -g express-generator
+
+///creacion de archivos/vistas para ejs
+npx express --view=ejs sequelize_cli
+
+///instalacion de paquetes completo
+npm install <---- instalarlo en el visual code
+
+///verificacion del funcionamiento de webpack
+SET DEBUG=sequelize-cli:* & npm start
+
+///instacion de dependencias
+npm i --save-dev sequelize-cli
+npm i --save-dev sequelize
+npm i mysql2
+npm i nodem -D
+npm i nodemon -D
+
+///inicializacion de proyecto con sequelize
+npx sequelize-cli init
+
+///configurar archivo de config/config.json (segun el codigo esta con ip de linux)
+{
+  "development": {
+    "username": "kenshin",
+    "password": "root",
+    "database": "database_sequelize",
+    "host": "192.168.18.22",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "kenshin",
+    "password": "root",
+    "database": "database_sequelize",
+    "host": "192.168.18.22",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "kenshin",
+    "password": "root",
+    "database": "database_sequelize",
+    "host": "192.168.18.22",
+    "dialect": "mysql"
+  }
+}
+
+///configuracion de carpeta seeders/archivo instalado
+'use strict';
+
+/** @type {import('sequelize-cli').Migration} */
+module.exports = {
+  up: (queryInterface, Sequelize) => {
+    return queryInterface.bulkInsert('Users', [{
+      firstName: 'kenshin',
+      lastName: 'himura',
+      email: 'kenshin@example.com',
+      createdAt: new Date(),
+      updatedAt: new Date()
+    }]);
+  },
+  down: (queryInterface, Sequelize) => {
+    return queryInterface.bulkDelete('Users', null, {});
+  }
+};
+
+///creacion de la base de datos
+npx sequelize-cli db:create
+
+///creacion de tabla con atributos
+npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string
+
+///migracion a la base de datos
+npx sequelize-cli db:migrate
+
+///creacion de seeder para ingresar el dato a la base de datos
+npx sequelize-cli seed:generate --name demo-user
+
+///migracio de datos de seeder a la tabla de la base de datos
+npx sequelize-cli db:seed:all

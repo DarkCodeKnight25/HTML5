@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/login.css">    <!-- Roboto font - Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap">
+    <!-- font awesome - Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- link boxicons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        function validar(){
+            u = document.getElementById("txtemail").value;
+            c = document.getElementById("txtpassword").value;
+            if ((u == 'kenshin@gmail.com') && (c == '2592000'))
+              {
+                window.open("/view/perfil.html");
+              }
+              else
+              {
+                alert('Lo siento...no es posible iniciar sesión!!!');
+              }
+        }
+    </script>
+    <title>Login</title>
+</head>
+<body>
+    <!-- creacion del footer -->
+    <!-- <section class="footer">
+        <div class="footer">
+            <p>© Altared Group S.A.C.</p>
+        </div>
+    </section> -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-content"><h1>Altared Group </h1>
+                <!-- <img src="/public/img/AltaredGroup.png" id="mobile-menu" alt=""> -->
+            <div class="menu-toggle" id="mobile-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-items">
+                <li class="navbar-item"><a href="/view/inicio.html" class="navbar-link">Inicio</a></li>
+                <li class="navbar-item"><a href="/view/producto.html" class="navbar-link">Productos</a></li>
+                <li class="navbar-item"><a href="/view/contactos.html" class="navbar-link">Contactenos</a></li>
+                <li class="navbar-item"><a href="/view/login.html" class="navbar-link">Iniciar Sesion</a></li>
+                <div class="search-container">
+                    <i class="fa-solid fa-magnifying-glass fa-lg" id="search-icon"></i>
+                    <input type="text" class="search-input" placeholder="Buscar...">
+                </div>
+            </ul>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form action="">
+                    <h1>Login</h1>
+                    <div class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" name="txtemail" required>
+                        <label for="">Correo Electronico</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" name="txtpassword" required>
+                        <label for="">Contraseña</label>
+                    </div>
+                    <div class="forget">
+                        <label for=""><input type="checkbox">Recordar mi  <a href="#">contraseña</a></label>
+                      
+                    </div>
+                    <button type="button" onclick="validar()">Ingresar</button>
+                    <div class="register">
+                        <p>No tienes cuenta <a href="#">Registrarse</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <script src="/public/js/inicio.js"></script>
+</body>
+
+
+</html>

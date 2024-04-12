@@ -1,0 +1,40 @@
+*****CREACION DE UNA API EN SEQUELIZE*****
+///creacion de package.json
+npm init -y
+
+///creacion de dependencias segun lo indicado
+npm i express mysql2 sequelize sequelize-cli
+///creacion de carpetas de configuracion, migracion, models y seeders
+npx sequelize-cli init
+
+///configuracion de la bd en config/config.json
+{
+  "development": {
+    "username": "kenshin",
+    "password": "root",
+    "database": "sequelize_db",
+    "host": "192.168.18.22",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "kenshin",
+    "password": "root",
+    "database": "sequelize_db",
+    "host": "192.168.18.22",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "kenshin",
+    "password": "root",
+    "database": "sequelize_db",
+    "host": "192.168.18.22",
+    "dialect": "mysql"
+  }
+}
+
+/// creacion de la bd en el linux mediante las configuraciones de ip
+npx sequelize-cli db:create
+
+///creacion de un modelo(tabla) para carpeta migracion
+npx sequelize-cli model:generate --name categoria --attribute descripcion:string
+npx sequelize-cli model:generate --name producto --attributes descripcion:string,idcategoria:integer
